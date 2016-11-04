@@ -8,7 +8,7 @@ namespace MarvelApp
 		{
 			InitializeComponent();
 
-			MainPage = new MarvelAppPage();
+			MainPage = new NavigationPage( new MarvelAppPage());
 		}
 
 		protected override void OnStart()
