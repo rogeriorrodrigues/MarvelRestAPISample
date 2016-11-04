@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MarvelApp"
+		x:Class="MarvelApp.MarvelAppPage"
+		xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+		Title="Personagens Marvel">
+	<ContentPage.Content>
+		<ListView 
+                CachingStrategy="RecycleElement"
+                SeparatorColor="Navy"
+                HasUnevenRows="True"
+                x:Name="lstMarvel"
+				ItemTapped="MarvelItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Spacing="5" BackgroundColor="#F8F8FF" Margin="5" Padding="4">
+
+								<StackLayout HorizontalOptions="Start" VerticalOptions="Center" >
+									<controls:CircleImage Source="{Binding thumbnail}" Aspect="AspectFill">
+									  <controls:CircleImage.WidthRequest>
+									    <OnPlatform x:TypeArguments="x:Double"
+									      iOS="55"
+									      Android="60"/>
+									   </controls:CircleImage.WidthRequest>
+									<controls:CircleImage.HeightRequest>
+									    <OnPlatform x:TypeArguments="x:Double"
+									      iOS="55"
+									      Android="60"/>
+									   </controls:CircleImage.HeightRequest>
+									</controls:CircleImage>
+								</StackLayout>
+								<StackLayout Orientation="Vertical" Padding="4" HorizontalOptions="End" VerticalOptions="StartAndExpand" >
+							
+										<Label Text="{Binding name}" HorizontalOptions="Start" VerticalOptions="Center" FontSize="16" />
+									
+								</StackLayout>
+
+                           </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+	</ContentPage.Content>
+</ContentPage>

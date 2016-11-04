@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		x:Class="MarvelApp.PersonagemDetailsPage"
+		xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+	<ContentPage.Content>
+		<StackLayout HorizontalOptions="Start" VerticalOptions="Center" >
+									<controls:CircleImage x:Name="imgPerson" BorderThickness="1" BorderColor="Gray" Aspect="AspectFill">
+									  <controls:CircleImage.WidthRequest>
+									    <OnPlatform x:TypeArguments="x:Double"
+									      iOS="55"
+									      Android="60"/>
+									   </controls:CircleImage.WidthRequest>
+									<controls:CircleImage.HeightRequest>
+									    <OnPlatform x:TypeArguments="x:Double"
+									      iOS="55"
+									      Android="60"/>
+									   </controls:CircleImage.HeightRequest>
+									</controls:CircleImage>
+					</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
